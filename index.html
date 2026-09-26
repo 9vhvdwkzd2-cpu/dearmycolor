@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<title>Dear My Color | 이미지 컨설팅 체험 신청</title>
+<meta name="description" content="퍼스널 컬러를 넘어, 나에게 어울리는 이미지를 찾다. Dear My Color 이미지 컨설팅 체험 신청">
+<meta name="theme-color" content="#ffffff">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+
+<!-- 공유 미리보기 (카톡·인스타·문자). 배포 후 도메인을 실제 주소로 바꿔주세요 -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dear My Color | 이미지 컨설팅">
+<meta property="og:description" content="퍼스널 컬러를 넘어, 나에게 어울리는 이미지를 찾다.">
+<meta property="og:image" content="https://YOUR-DOMAIN.vercel.app/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- 첫 화면 이미지를 가장 먼저 받도록 -->
+<link rel="preload" as="image" type="image/webp"
+      imagesrcset="/img/cover-540.webp 540w, /img/cover-1024.webp 1024w"
+      imagesizes="(max-width: 440px) 84vw, 360px">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- 한글 본문 폰트 -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- 영문 세리프는 실제 쓰는 글자만 받음 -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&text=DearMyColorQ0123456789.&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/app.js" defer></script>
+</head>
+<body>
+
+  <!-- 첫 화면 -->
+  <main class="screen intro active" id="intro" aria-label="시작 화면">
+    <h1 class="brand">Dear My Color</h1>
+    <p class="sub">IMAGE CONSULTING</p>
+    <picture>
+      <source type="image/webp"
+              srcset="/img/cover-540.webp 540w, /img/cover-1024.webp 1024w"
+              sizes="(max-width: 440px) 84vw, 360px">
+      <img class="cover" src="/img/cover-720.jpg" width="1024" height="1280"
+           fetchpriority="high" decoding="async"
+           alt="Dear my color 이미지 컨설팅 - 퍼스널 컬러를 넘어, 나에게 어울리는 이미지를 찾다">
+    </picture>
+  </main>
+
+  <!-- 설문 화면 -->
+  <main class="screen survey" id="survey" aria-label="설문">
+    <div class="topbar">
+      <button class="back-btn" id="backBtn" type="button" aria-label="이전 질문">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <div class="progress">
+        <div class="progress-count" id="count">1/10</div>
+        <div class="track" role="progressbar" aria-valuemin="1" id="bar"><div class="fill" id="fill"></div></div>
+      </div>
+    </div>
+    <p class="q-no" id="qNo">Q1.</p>
+    <p class="q-text" id="qText"></p>
+    <p class="q-hint" id="qHint"></p>
+    <div class="answer" id="answer"></div>
+    <p class="error-msg" id="error" role="alert" aria-live="assertive"></p>
+  </main>
+
+  <!-- 완료 화면 -->
+  <main class="screen done" id="done" aria-label="제출 완료">
+    <div class="done-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+    <h2>신청이 완료됐어요</h2>
+    <p>남겨주신 번호로 체험 일정을 안내해 드릴게요.<br>조금만 기다려 주세요 :)</p>
+  </main>
+
+  <!-- 하단 고정 버튼 -->
+  <div class="cta-bar" id="ctaBar">
+    <button class="main-btn shine" id="mainBtn" type="button">
+      <span id="mainLabel">시작하기</span>
+      <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+    </button>
+  </div>
+
+</body>
+</html>
