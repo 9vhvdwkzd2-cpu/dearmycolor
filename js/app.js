@@ -2,7 +2,7 @@
 (() => {
   // ===== 구글 스프레드시트 연결 =====
   // Apps Script를 '웹 앱'으로 배포한 뒤 받은 주소를 아래에 붙여넣으세요.
-  const SHEET_URL = "여기에_APPS_SCRIPT_웹앱_URL";
+  const SHEET_URL = "https://script.google.com/macros/s/AKfycbz9FyyOKoAPvAlyQnjGlxs76jQLZbG3Zka8MI4iKRskdk9c8EADC3rjp4et6ff7yS8/exec";
 
   // ===== 질문 목록 (순서 = 화면 순서, key = 시트 열 이름) =====
   const QUESTIONS = [
